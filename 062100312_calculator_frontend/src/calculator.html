@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/style.css" />
+</head>
+<body>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./javascripts/tools.js"></script>
+  <script>
+    axios.defaults.baseURL = 'http://localhost:12345/';
+  </script>
+
+  <div class="calcWrap">
+    <div class="calc-echo" onclick="inputExprOnClick()">
+      <div class="calc-text">
+        <div class="calc-show-text-process"></div>
+        <div id="resultBox" class="calc-show-text-result-box">
+          <span id="result">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="calc-oprate">
+      <div class="func-calc" style="display:table;">
+        <div class="month-echo" onclick="inputMonthOnClick()">
+          <div class="calc-text">
+            <div class="month-show-text-process"></div>
+            <div id="monthBox" class="month-show-text-result-box">
+              <span id="month">0</span>
+            </div>
+          </div>
+        </div>
+        <div class="func-calc-change" onclick="selMode()">
+          <div id="sel1" class="func-calc-change-select active-key">计算</div>
+          <div id="sel2" class="func-calc-change-select">存款</div>
+          <div id="sel3" class="func-calc-change-select">贷款</div>
+        </div>
+      </div>
+      <div class="base-calc"></div>
+    </div>
+  </div>
+  <script src="./javascripts/index.js"></script>
+</body>
+</html>
